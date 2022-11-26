@@ -11,7 +11,7 @@ class CharactersViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.tabBarItem.selectedImage = UIImage(named: "house.fill")
     }
 
 
