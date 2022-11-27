@@ -50,7 +50,7 @@ final class CharactersViewController: UIViewController {
     private func componentsRegister() {
         collectionView.register(CharacterCollectionViewCell.nib() , forCellWithReuseIdentifier: CharacterCollectionViewCell.identifier)
     }
-    
+   
    
 
 }
@@ -58,8 +58,11 @@ final class CharactersViewController: UIViewController {
 extension CharactersViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        print("You tapped me")
-    }
+        
+        guard let detailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(describing: CharacterDetailViewController.self)) as? CharacterDetailViewController else { return }
+        detailVC.selectedCharacter = allCharacters?[indexPath.row]
+                 self.navigationController?.pushViewController(detailVC, animated: true)
+        }
 }
 
 extension CharactersViewController: UICollectionViewDataSource {

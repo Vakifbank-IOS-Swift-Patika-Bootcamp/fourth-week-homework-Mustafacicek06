@@ -41,14 +41,6 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MD1-JG-Rl5">
-                        <rect key="frame" x="50.666666666666664" y="197" width="67.666666666666686" height="28"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="28" id="DxO-od-rRA"/>
-                        </constraints>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="tinted" title="Detail"/>
-                    </button>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
@@ -60,12 +52,10 @@
                 <constraint firstItem="kno-rh-dj2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="Luv-BQ-uoa"/>
                 <constraint firstItem="zZk-zF-9Lb" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="NYP-Xp-OVH"/>
                 <constraint firstItem="6rP-Vc-DL0" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="PSx-5O-zvE"/>
-                <constraint firstItem="MD1-JG-Rl5" firstAttribute="top" secondItem="4Qb-DD-5Hh" secondAttribute="bottom" constant="7" id="Pqf-gj-DeV"/>
                 <constraint firstAttribute="trailing" secondItem="zZk-zF-9Lb" secondAttribute="trailing" id="bJG-yH-LS7"/>
-                <constraint firstAttribute="bottom" secondItem="MD1-JG-Rl5" secondAttribute="bottom" constant="7" id="dk8-5n-nQ3"/>
+                <constraint firstAttribute="bottom" secondItem="4Qb-DD-5Hh" secondAttribute="bottom" constant="42" id="qQt-7B-5cL"/>
                 <constraint firstItem="4Qb-DD-5Hh" firstAttribute="top" secondItem="kno-rh-dj2" secondAttribute="bottom" constant="3" id="sKw-ZJ-N6E"/>
                 <constraint firstItem="6rP-Vc-DL0" firstAttribute="top" secondItem="zZk-zF-9Lb" secondAttribute="bottom" constant="8" symbolic="YES" id="voV-va-Lpc"/>
-                <constraint firstItem="MD1-JG-Rl5" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="xrj-Oz-i1r"/>
             </constraints>
             <size key="customSize" width="169" height="232"/>
             <connections>

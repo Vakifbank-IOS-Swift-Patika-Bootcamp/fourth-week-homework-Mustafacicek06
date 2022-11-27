@@ -52,14 +52,14 @@ enum Endpoints {
 
        case characters
        
-       case marketHistory(String)
+       case quotes(Int)
 
        var stringValue: String {
            switch self {
            case .characters:
                return Endpoints.base + "characters"
-           case .marketHistory(let marketId):
-               return Endpoints.base + "/getmarkethistory?market=\(marketId)"
+           case .quotes(let characterID):
+               return Endpoints.base + "quotes/\(characterID)"
            }
        }
 

@@ -23,8 +23,7 @@ final class CharacterCollectionViewCell: UICollectionViewCell {
 
     }
     
- 
-    
+
     public func configure(url imageURL: String , characterName: String, birthday: String, nickname: String){
         setUIAttributes()
         self.characterNameLabel.text = characterName
@@ -39,8 +38,6 @@ final class CharacterCollectionViewCell: UICollectionViewCell {
         self.layer.borderColor = UIColor.gray.cgColor
         self.layer.cornerRadius = CGFloat(10)
     }
-    
-    
     // if you using nib, recommended this
     static func nib() -> UINib {
         return UINib(nibName: CharacterCollectionViewCell.identifier, bundle: nil)
