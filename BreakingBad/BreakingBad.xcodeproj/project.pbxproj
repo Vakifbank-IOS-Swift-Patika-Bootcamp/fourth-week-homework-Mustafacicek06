@@ -20,6 +20,9 @@
 		0836C56F29340F8100A55694 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0836C56E29340F8100A55694 /* UIApplication+Extension.swift */; };
 		0836C5722934102B00A55694 /* EpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0836C5702934102B00A55694 /* EpisodeTableViewCell.swift */; };
 		0836C5732934102B00A55694 /* EpisodeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0836C5712934102B00A55694 /* EpisodeTableViewCell.xib */; };
+		0836C577293422B300A55694 /* EpisodeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0836C576293422B300A55694 /* EpisodeDetailView.swift */; };
+		0836C579293422C400A55694 /* EpisodeDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0836C578293422C400A55694 /* EpisodeDetailView.xib */; };
+		0836C57C2934257200A55694 /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0836C57B2934257200A55694 /* QuotesViewController.swift */; };
 		0852E975293393B1005A299E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0852E974293393B1005A299E /* Kingfisher */; };
 		0852E9782933A3FF005A299E /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0852E9772933A3FF005A299E /* CharacterDetailViewController.swift */; };
 		087EC5E22932607B00573C92 /* EpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087EC5E12932607B00573C92 /* EpisodeViewController.swift */; };
@@ -51,6 +54,9 @@
 		0836C56E29340F8100A55694 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		0836C5702934102B00A55694 /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
 		0836C5712934102B00A55694 /* EpisodeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodeTableViewCell.xib; sourceTree = "<group>"; };
+		0836C576293422B300A55694 /* EpisodeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailView.swift; sourceTree = "<group>"; };
+		0836C578293422C400A55694 /* EpisodeDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodeDetailView.xib; sourceTree = "<group>"; };
+		0836C57B2934257200A55694 /* QuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewController.swift; sourceTree = "<group>"; };
 		0852E9772933A3FF005A299E /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
 		087EC5E12932607B00573C92 /* EpisodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewController.swift; sourceTree = "<group>"; };
 		087EC5E32932609000573C92 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
@@ -119,8 +125,8 @@
 		0836C56529340C1300A55694 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				0836C5702934102B00A55694 /* EpisodeTableViewCell.swift */,
-				0836C5712934102B00A55694 /* EpisodeTableViewCell.xib */,
+				0836C575293421C600A55694 /* UIView */,
+				0836C574293421C200A55694 /* Cell */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -160,12 +166,31 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		0836C574293421C200A55694 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0836C5702934102B00A55694 /* EpisodeTableViewCell.swift */,
+				0836C5712934102B00A55694 /* EpisodeTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		0836C575293421C600A55694 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				0836C576293422B300A55694 /* EpisodeDetailView.swift */,
+				0836C578293422C400A55694 /* EpisodeDetailView.xib */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
 		0852E9762933A3E5005A299E /* SubPages */ = {
 			isa = PBXGroup;
 			children = (
 				08B10D402933D92B000DD596 /* Model */,
 				08B10D3D2933D5FC000DD596 /* Service */,
 				0852E9772933A3FF005A299E /* CharacterDetailViewController.swift */,
+				0836C57B2934257200A55694 /* QuotesViewController.swift */,
 			);
 			path = SubPages;
 			sourceTree = "<group>";
@@ -369,6 +394,7 @@
 				087EC5F329328B4900573C92 /* CharacterCollectionViewCell.xib in Resources */,
 				080DBFAD29325E1900077DE4 /* LaunchScreen.storyboard in Resources */,
 				080DBFAA29325E1900077DE4 /* Assets.xcassets in Resources */,
+				0836C579293422C400A55694 /* EpisodeDetailView.xib in Resources */,
 				0836C5732934102B00A55694 /* EpisodeTableViewCell.xib in Resources */,
 				080DBFA829325E1800077DE4 /* Main.storyboard in Resources */,
 			);
@@ -384,7 +410,9 @@
 				08B10D422933D936000DD596 /* Quotes.swift in Sources */,
 				0836C56A29340F1000A55694 /* AlertManager.swift in Sources */,
 				087EC5F52932969E00573C92 /* BaseResponse.swift in Sources */,
+				0836C577293422B300A55694 /* EpisodeDetailView.swift in Sources */,
 				0852E9782933A3FF005A299E /* CharacterDetailViewController.swift in Sources */,
+				0836C57C2934257200A55694 /* QuotesViewController.swift in Sources */,
 				087EC5F229328B4900573C92 /* CharacterCollectionViewCell.swift in Sources */,
 				087EC5E22932607B00573C92 /* EpisodeViewController.swift in Sources */,
 				080DBFA529325E1800077DE4 /* CharactersViewController.swift in Sources */,

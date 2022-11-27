@@ -110,33 +110,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quotes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgm-Lt-c2e">
-                                <rect key="frame" x="164.66666666666666" y="479" width="63.666666666666657" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" systemColor="linkColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NLc-jU-tTk">
-                                <rect key="frame" x="27" y="511" width="339" height="268"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuJ-81-7JZ">
+                                <rect key="frame" x="132.33333333333331" y="548" width="128.33333333333331" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="268" id="If8-OG-wyq"/>
+                                    <constraint firstAttribute="width" constant="128.33000000000001" id="bSz-qL-xVv"/>
                                 </constraints>
-                            </tableView>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Go To Quotes"/>
+                                <connections>
+                                    <action selector="goToQuotesOnPressed:" destination="LN8-bU-LWQ" eventType="touchUpInside" id="TMm-WU-Ev3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="f9x-HQ-LKR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="NLc-jU-tTk" firstAttribute="leading" secondItem="f9x-HQ-LKR" secondAttribute="leading" constant="27" id="2DF-sK-0cV"/>
                             <constraint firstItem="6pc-9X-YAI" firstAttribute="top" secondItem="waY-qb-HRs" secondAttribute="bottom" constant="22" id="3Vg-Ds-Nmu"/>
-                            <constraint firstItem="f9x-HQ-LKR" firstAttribute="trailing" secondItem="NLc-jU-tTk" secondAttribute="trailing" constant="27" id="3j4-Fi-XwN"/>
-                            <constraint firstItem="NLc-jU-tTk" firstAttribute="centerX" secondItem="gdG-I9-Wlj" secondAttribute="centerX" id="7ia-zs-vep"/>
                             <constraint firstItem="waY-qb-HRs" firstAttribute="top" secondItem="tbg-Mp-07e" secondAttribute="bottom" constant="19" id="Cyh-J2-vch"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="NLc-jU-tTk" secondAttribute="bottom" constant="-10" id="EZK-E2-0IZ"/>
+                            <constraint firstItem="tuJ-81-7JZ" firstAttribute="top" secondItem="x0i-LB-HKf" secondAttribute="bottom" constant="280" id="Kfz-7W-irs"/>
                             <constraint firstItem="tbg-Mp-07e" firstAttribute="leading" secondItem="waY-qb-HRs" secondAttribute="leading" id="Kl6-vm-Ear"/>
-                            <constraint firstItem="sgm-Lt-c2e" firstAttribute="centerX" secondItem="NLc-jU-tTk" secondAttribute="centerX" id="Kxs-Hh-zhg"/>
-                            <constraint firstItem="NLc-jU-tTk" firstAttribute="top" secondItem="sgm-Lt-c2e" secondAttribute="bottom" constant="8" symbolic="YES" id="LUk-Br-gib"/>
                             <constraint firstItem="x0i-LB-HKf" firstAttribute="centerX" secondItem="gdG-I9-Wlj" secondAttribute="centerX" id="Vqx-R0-V0u"/>
+                            <constraint firstItem="tuJ-81-7JZ" firstAttribute="centerX" secondItem="gdG-I9-Wlj" secondAttribute="centerX" id="XQE-8E-btl"/>
                             <constraint firstItem="waY-qb-HRs" firstAttribute="leading" secondItem="6pc-9X-YAI" secondAttribute="leading" id="c4M-9Z-Pb8"/>
                             <constraint firstItem="tbg-Mp-07e" firstAttribute="leading" secondItem="f9x-HQ-LKR" secondAttribute="leading" constant="76" id="cUF-Qw-ZwP"/>
                             <constraint firstItem="tbg-Mp-07e" firstAttribute="top" secondItem="x0i-LB-HKf" secondAttribute="bottom" constant="29" id="fUf-JP-hlT"/>
@@ -149,12 +143,43 @@
                         <outlet property="characterName" destination="tbg-Mp-07e" id="wZZ-k7-2zZ"/>
                         <outlet property="imageView" destination="x0i-LB-HKf" id="6zt-lB-0M7"/>
                         <outlet property="nickName" destination="waY-qb-HRs" id="WE1-Hb-E41"/>
-                        <outlet property="tableView" destination="NLc-jU-tTk" id="GX5-4Q-vyD"/>
+                        <segue destination="Vaj-1c-dIg" kind="show" identifier="toQuotes" id="EJo-EM-v8R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RNw-Ij-bT8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2722.9007633587785" y="2330.2816901408451"/>
+        </scene>
+        <!--Quotes View Controller-->
+        <scene sceneID="4IR-LO-6Zs">
+            <objects>
+                <viewController storyboardIdentifier="QuotesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Vaj-1c-dIg" customClass="QuotesViewController" customModule="BreakingBad" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5YV-FI-wae">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NLc-jU-tTk">
+                                <rect key="frame" x="10" y="118" width="373" height="631"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dih-Mc-Mgt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dih-Mc-Mgt" firstAttribute="bottom" secondItem="NLc-jU-tTk" secondAttribute="bottom" constant="20" id="SiZ-nb-icN"/>
+                            <constraint firstItem="dih-Mc-Mgt" firstAttribute="trailing" secondItem="NLc-jU-tTk" secondAttribute="trailing" constant="10" id="dNU-DE-Bic"/>
+                            <constraint firstItem="NLc-jU-tTk" firstAttribute="top" secondItem="dih-Mc-Mgt" secondAttribute="top" constant="15" id="hV5-Ju-0SN"/>
+                            <constraint firstItem="NLc-jU-tTk" firstAttribute="leading" secondItem="dih-Mc-Mgt" secondAttribute="leading" constant="10" id="vNs-Pq-vdy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="M5a-Yn-fXD"/>
+                    <connections>
+                        <outlet property="tableView" destination="NLc-jU-tTk" id="8mc-9H-czB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E8X-wM-eYq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1757" y="2337"/>
         </scene>
         <!--Chapters-->
         <scene sceneID="Zug-XT-pIx">
