@@ -51,13 +51,15 @@ enum Endpoints {
        static let base = "https://www.breakingbadapi.com/api/"
 
        case characters
-       
        case quotes(Int)
-
+       case episodes
+    
        var stringValue: String {
            switch self {
            case .characters:
                return Endpoints.base + "characters"
+           case .episodes:
+               return Endpoints.base +  "episodes"
            case .quotes(let characterID):
                return Endpoints.base + "quotes/\(characterID)"
            }

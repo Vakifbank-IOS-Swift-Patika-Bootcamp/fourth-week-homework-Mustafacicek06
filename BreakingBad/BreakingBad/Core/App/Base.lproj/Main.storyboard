@@ -159,14 +159,29 @@
         <!--Chapters-->
         <scene sceneID="Zug-XT-pIx">
             <objects>
-                <viewController id="8xM-HI-pwp" customClass="ChaptersViewController" customModule="BreakingBad" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8xM-HI-pwp" customClass="EpisodeViewController" customModule="BreakingBad" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XgW-xT-Gcf">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ECw-a1-06R">
+                                <rect key="frame" x="10" y="69" width="373" height="690"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="9oD-sG-CBL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9oD-sG-CBL" firstAttribute="trailing" secondItem="ECw-a1-06R" secondAttribute="trailing" constant="10" id="SGn-kd-Ln6"/>
+                            <constraint firstItem="9oD-sG-CBL" firstAttribute="bottom" secondItem="ECw-a1-06R" secondAttribute="bottom" constant="10" id="SRM-G9-heP"/>
+                            <constraint firstItem="ECw-a1-06R" firstAttribute="leading" secondItem="9oD-sG-CBL" secondAttribute="leading" constant="10" id="WR7-G1-F4P"/>
+                            <constraint firstItem="ECw-a1-06R" firstAttribute="top" secondItem="9oD-sG-CBL" secondAttribute="top" constant="10" id="eCY-3u-qm4"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Chapters" image="book.fill" catalog="system" id="kEy-Qn-k6Y"/>
+                    <connections>
+                        <outlet property="episodeTableView" destination="ECw-a1-06R" id="KSw-pD-07b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YAI-bq-qft" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

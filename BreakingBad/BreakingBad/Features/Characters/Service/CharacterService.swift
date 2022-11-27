@@ -8,7 +8,7 @@
 import Foundation
 
 
-class CharacterService {
+final class CharacterService {
     
     static let shared = CharacterService.init()
     
