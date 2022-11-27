@@ -24,4 +24,4 @@ struct CharacterElement: Codable {
     }
 }
 
-typealias Character = [CharacterElement]
+typealias Characters = [CharacterElement]

@@ -10,28 +10,7 @@ import Foundation
 
 class Client {
     
-    enum Endpoints {
-           static let base = "https://www.breakingbadapi.com/api/"
-
-           case assets
-           case markets
-           case marketHistory(String)
-
-           var stringValue: String {
-               switch self {
-               case .assets:
-                   return Endpoints.base + "/getassets"
-               case .markets:
-                   return Endpoints.base + "/getmarkets"
-               case .marketHistory(let marketId):
-                   return Endpoints.base + "/getmarkethistory?market=\(marketId)"
-               }
-           }
-
-           var url: URL {
-               return URL(string: stringValue)!
-           }
-       }
+  
        
        @discardableResult
        class func taskForGETRequest<ResponseType: Decodable>(url: URL, responseType: ResponseType.Type, completion: @escaping (ResponseType?, Error?) -> Void) -> URLSessionDataTask {
@@ -67,3 +46,24 @@ class Client {
        }
 
 }
+
+enum Endpoints {
+       static let base = "https://www.breakingbadapi.com/api/"
+
+       case characters
+       
+       case marketHistory(String)
+
+       var stringValue: String {
+           switch self {
+           case .characters:
+               return Endpoints.base + "characters"
+           case .marketHistory(let marketId):
+               return Endpoints.base + "/getmarkethistory?market=\(marketId)"
+           }
+       }
+
+       var url: URL {
+           return URL(string: stringValue)!
+       }
+   }
